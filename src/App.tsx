@@ -1,5 +1,5 @@
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { ArrowUpRight, Github, Mail, Code2, Database, Layers3, Sparkles } from 'lucide-react';
+import { ArrowUpRight, GithubIcon, Mail, Code2, Database, Layers3, Sparkles } from 'lucide-react';
 
 const skills=[['Frontend','React · TypeScript · Vite · Tailwind CSS'],['Application','TanStack Query · React Hook Form · Zod · REST APIs'],['Backend','Node.js · Express · PostgreSQL · Prisma'],['Delivery','Git · GitHub · Vercel · Render · Neon · Cloudinary']];
 const projects=[
@@ -23,7 +23,7 @@ function App(){
   <section id="work" className="work"><div className="sectionHead"><span>01 / SELECTED WORK</span><h2>Products, not<br/><em>just pages.</em></h2><p>Two end-to-end builds that show how I think across interface, application logic, data and delivery.</p></div>
    {projects.map((p,i)=><motion.article className={`project ${p.tone}`} key={p.name} initial={{opacity:0,y:70}} whileInView={{opacity:1,y:0}} viewport={{once:true,amount:.2}} transition={{duration:.7}}>
     <div className="projectTop"><span>{p.no}</span><span>{p.type}</span><span>2026</span></div>
-    <div className="projectBody"><div><h3>{p.name}</h3><p>{p.desc}</p><small>{p.stack}</small><div className="actions"><a href={p.live} target="_blank">LIVE EXPERIENCE <ArrowUpRight size={16}/></a><a href={p.repo} target="_blank"><Github size={16}/> SOURCE</a></div></div><div className="browser"><div className="browserBar"><i/><i/><i/><span>{i===0?'nova-commerce':'eventra'}.vercel.app</span></div><div className="mock"><span className="bigMark">{i===0?'NOVA':'EVENTRA'}</span><div className="mockGrid"><i/><i/><i/></div><div className="scan"/></div></div></div>
+    <div className="projectBody"><div><h3>{p.name}</h3><p>{p.desc}</p><small>{p.stack}</small><div className="actions"><a href={p.live} target="_blank" rel="noreferrer">LIVE EXPERIENCE <ArrowUpRight size={16}/></a><a href={p.repo} target="_blank" rel="noreferrer"><GithubIcon size={16}/> SOURCE</a></div></div><div className="browser"><div className="browserBar"><i/><i/><i/><span>{i===0?'nova-commerce':'eventra'}.vercel.app</span></div><div className="mock"><span className="bigMark">{i===0?'NOVA':'EVENTRA'}</span><div className="mockGrid"><i/><i/><i/></div><div className="scan"/></div></div></div>
    </motion.article>)}
   </section>
 
@@ -31,7 +31,7 @@ function App(){
    <div className="architecture"><span>HOW I SHIP</span><div><b>INTERFACE</b><i>→</i><b>API</b><i>→</i><b>SERVER</b><i>→</i><b>DATABASE</b><i>→</i><b>CLOUD</b></div></div>
   </section>
 
-  <section id="contact" className="contact"><span>03 / LET'S BUILD</span><h2>Have a product<br/>worth <em>building?</em></h2><a href="mailto:favouregbuna4@gmail.com" className="mail"><Mail/> favouregbuna4@gmail.com <ArrowUpRight/></a><div className="footer"><span>FAVOUR EGBUNA © 2026</span><a href="https://github.com/FAVOUR-EGBUNA" target="_blank">GITHUB ↗</a><span>FULL-STACK DEVELOPER</span></div></section>
+  <section id="contact" className="contact"><span>03 / LET'S BUILD</span><h2>Have a product<br/>worth <em>building?</em></h2><a href="mailto:favouregbuna4@gmail.com" className="mail"><Mail/> favouregbuna4@gmail.com <ArrowUpRight/></a><div className="footer"><span>FAVOUR EGBUNA © 2026</span><a href="https://github.com/FAVOUR-EGBUNA" target="_blank" rel="noreferrer">GITHUB ↗</a><span>FULL-STACK DEVELOPER</span></div></section>
  </main>
 }
 export default App;
